@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Guardar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnGuardar"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgHeroe"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/camara" />
+
+                <EditText
+                    android:id="@+id/edtNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgHeroe"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/imgHeroe"
+                    android:hint="Nombre de super heroe" />
+
+                <EditText
+                    android:id="@+id/edtAlterEgo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgHeroe"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/imgHeroe"
+                    android:hint="Alter Ego" />
+
+                <View
+                    android:id="@+id/viewSeparador"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/imgHeroe"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtBiografia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewSeparador"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Bio"
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/edtBiografia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtBiografia"
+                    android:layout_marginTop="16dp"
+                    android:hint="Biografia corta" />
+
+                <TextView
+                    android:id="@+id/txtPoder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtBiografia"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Poder"
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
+
+                <RatingBar
+                    android:id="@+id/ratBarPoder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPoder"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:progressTint="@color/yellow" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>
